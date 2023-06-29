@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated  Parallax  Website</title>
+    <!-- ..................Custom Css Link................. -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <!-- ..................Start Nav Bar................. -->
+        <nav>
+            <div class="container nav-container">
+                <a href="" class="logo"><h3>Beg Joker.</h3></a>
+                <ul class="nav-links">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>                
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- ..................End Nav Bar................ -->
+
+
+        <!-- ..................Start Header Section................ -->
+        <header>       
+            <div class="shape" id="shape1" style="--i:1;"></div>
+            <div class="shape" id="shape2" style="--i:2;"></div>
+            <div class="shape" id="shape3" style="--i:3;"></div>
+            <h1 class="headeing-text">Water Animation <br> Parallax Web</h1>
+            <div class="shape" id="shape4" style="--i:4;"></div>            
+        </header>      
+        <!-- ..................End Header Section................ -->
+
+        <!-- ..................Demo Text Section................ -->
+        <section class="parallax-demo">
+            <div class="container demo-text-container">
+                <h2>Parallax Scroll Website</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iste voluptate consectetur ratione corrupti, nesciunt sed aliquid autem magni doloremque et quisquam itaque, nulla deleniti eos. Possimus eum in, nisi consequatur ducimus aspernatur? Ab, tenetur? Sapiente tempora tenetur voluptatem beatae similique officiis facere, quas explicabo officia aliquid distinctio maiores quae inventore veniam esse impedit debitis ipsam? Quis nihil incidunt, pariatur modi aliquam eaque id est sunt dolor autem reiciendis quidem iusto nesciunt debitis blanditiis consequatur a hic sint dignissimos assumenda. Dolorem quas magnam odit quis atque vitae iusto, aperiam voluptatibus ex, perferendis harum soluta dolor deserunt saepe porro minima ad vero obcaecati amet. Suscipit, molestias eaque. Id ex fugiat doloribus, nisi rem voluptatibus nesciunt autem perferendis asperiores nobis fuga atque iusto reprehenderit nihil quibusdam eligendi ad nostrum omnis. Sint animi, error deleniti provident vel, aspernatur ipsum nesciunt excepturi porro velit nostrum obcaecati quod illum. Commodi hic omnis id ipsum consequatur quas placeat aliquam rem minima, maxime eligendi provident eius. Repellat ut tempora libero debitis mollitia, aliquid omnis rem dolore voluptatibus assumenda accusantium perspiciatis! Asperiores mollitia atque, labore doloribus ullam reprehenderit, fuga itaque unde consequuntur beatae hic ipsam possimus veritatis neque amet facilis obcaecati. Eveniet et, minus alias accusamus deserunt fugiat?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio iste voluptate consectetur ratione corrupti, nesciunt sed aliquid autem magni doloremque et quisquam itaque, nulla deleniti eos. Possimus eum in, nisi consequatur ducimus aspernatur? Ab, tenetur? Sapiente tempora tenetur voluptatem beatae similique officiis facere, quas explicabo officia aliquid distinctio maiores quae inventore veniam esse impedit debitis ipsam? Quis nihil incidunt, pariatur modi aliquam eaque id est sunt dolor autem reiciendis quidem iusto nesciunt debitis blanditiis consequatur a hic sint dignissimos assumenda. Dolorem quas magnam odit quis atque vitae iusto, aperiam voluptatibus ex, perferendis harum soluta dolor deserunt saepe porro minima ad vero obcaecati amet. Suscipit, molestias eaque. Id ex fugiat doloribus, nisi rem voluptatibus nesciunt autem perferendis asperiores nobis fuga atque iusto reprehenderit nihil quibusdam eligendi ad nostrum omnis. Sint animi, error deleniti provident vel, aspernatur ipsum nesciunt excepturi porro velit nostrum obcaecati quod illum. Commodi hic omnis id ipsum consequatur quas placeat aliquam rem minima, maxime eligendi provident eius. Repellat ut tempora libero debitis mollitia, aliquid omnis rem dolore voluptatibus assumenda accusantium perspiciatis! Asperiores mollitia atque, labore doloribus ullam reprehenderit, fuga itaque unde consequuntur beatae hic ipsam possimus veritatis neque amet facilis obcaecati. Eveniet et, minus alias accusamus deserunt fugiat?
+                </p>
+            </div>
+        </section>
+
+
+        <!-- ..................Start Script................ -->
+        <script>
+            let headeingText = document.querySelector('.headeing-text');
+
+            let shape1 = document.querySelector('#shape1');
+            let shape2 = document.querySelector('#shape2');
+            let shape3 = document.querySelector('#shape3');
+            let shape4 = document.querySelector('#shape4');
+          
+            
+            window.addEventListener('scroll',()=>{
+                let Value = window.scrollY;
+
+                headeingText.style.marginTop = Value * 4 + 'px';           
+                shape1.style.backgroundPositionX = 400 + Value * 4 + 'px';           
+                shape2.style.backgroundPositionX = 300 + Value * -4 + 'px';           
+                shape3.style.backgroundPositionX = 200 + Value * 2 + 'px';           
+                shape4.style.backgroundPositionX = 100 + Value * -2 + 'px';         
+              
+            });
+
+        </script>
+        <!-- ..................End Script................ -->
+</body>
+</html>
